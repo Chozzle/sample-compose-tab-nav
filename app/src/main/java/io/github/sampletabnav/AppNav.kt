@@ -109,11 +109,11 @@ fun AppNav() {
                             // ACTUAL BEHAVIOUR:
                             // Clicking the favourite friend button, it switches tabs to the Friends list
                             // and shows a top level transition animation
-                            navController.navigate("friendDetail/$it")
+                            navController.navigate("${TopLevelScreen.Profile.navGraphRoute}/friendDetail/$it")
                         }
                     )
                 }
-                composable("friendDetail/{name}",
+                composable("${TopLevelScreen.Profile.navGraphRoute}/friendDetail/{name}",
                     arguments = listOf(navArgument("name") { type = NavType.StringType })) {
                     FriendDetail(name = it.arguments!!.getString("name")!!)
                 }
@@ -125,11 +125,11 @@ fun AppNav() {
                 composable(TopLevelScreen.FriendsList.startDestinationRoute) {
                     FriendsList(
                         onClickFriendDetail = {
-                            navController.navigate("friendDetail/$it")
+                            navController.navigate("${TopLevelScreen.FriendsList.navGraphRoute}/friendDetail/$it")
                         }
                     )
                 }
-                composable("friendDetail/{name}",
+                composable("${TopLevelScreen.FriendsList.navGraphRoute}/friendDetail/{name}",
                     arguments = listOf(navArgument("name") { type = NavType.StringType })) {
                     FriendDetail(name = it.arguments!!.getString("name")!!)
                 }
