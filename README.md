@@ -2,7 +2,7 @@
 
 Navigation with Compose doesn't allow you to navigate within a graph by default
 
-![Fixed](media/unexpectednav.mp4)
+![Unexpected](media/unexpectednav.mp4)
 
 
 Please check [these changes](https://github.com/Chozzle/sample-compose-tab-nav/pull/1/files) for the fix
